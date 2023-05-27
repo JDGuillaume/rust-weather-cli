@@ -81,6 +81,6 @@ fn main() -> Result<(), reqwest::Error> {
     let weather: CurrentWeather = reqwest::blocking::get(url)?.json()?;
 
     println!("{} {:?}", weather.main.temp, weather.weather[0].description);
-    // println!("{}", args.days);
+
     Ok(())
 }
